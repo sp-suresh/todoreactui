@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import AppRoutes from './AppRoutes';
 import TodoList from './components/TodoList'
-import Buckets from './components/Buckets'
+import Main from './components/Main'
 
 class App extends Component {
   render() {
@@ -11,9 +10,6 @@ class App extends Component {
 
       <div className="App">
       <AppRoutes/>
-      <Buckets>
-        <TodoList/>
-      </Buckets>
         {/*<header className="App-header">
             <img src={logo} className="App-logo" alt="logo" />
             <p>

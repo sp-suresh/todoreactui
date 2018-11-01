@@ -1,14 +1,11 @@
 import  React from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import Main from './components/Main'
 
-import About from './components/About'
-import TodoList from './components/TodoList'
 const AppRouter = () => (
   <Router>
     <div>
-      <Route path="/" exact component={TodoList} />
-      <Route path="/about/" component={About} />
-      <Route path="/todolist/" component={TodoList} />
+      <Route path="/" exact component={Main} />
     </div>
   </Router>
 );
