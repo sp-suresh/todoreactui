@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import 'react-tabs/style/react-tabs.css';
-
+import {todoApiHost} from '../config'
+import {getRequest} from '../lib/net'
 
 export default class TodoList extends Component {
   constructor(props){
@@ -11,51 +12,39 @@ export default class TodoList extends Component {
     this.getTodosForBucket = this.getTodosForBucket.bind(this)
   }
 
-  componentDidMount(){
-    console.log('this.props.bucketId', this.state.bucketId)
-    this.getTodosForBucket(0)
-  }
-
-  componentWillReceiveProps(nextProps) {
-    console.log('nextProps.value', nextProps.bucketId)
-    this.setState({
-      "todoList": [
-        {
-          "_id": "5bd9887fde4f882c275a7795",
-          "uid": 1,
-          "desc": "first todo desc",
-          "title": "first",
-          "bucket": "Red"
-        },
-        {
-          "_id": "5bd988a5de4f882c275a7796",
-          "uid": 1,
-          "desc": "second todo desc",
-          "title": "Second",
-          "bucket": "Green"
-        }
-      ]
+  getTodosForBucket(bucketId){
+    getRequest(`${todoApiHost}todo?bucketId=${bucketId || 0}&lmt=50/`, (d) => {
+      this.setState({todoList: JSON.parse(d.response).todoList})
     })
   }
 
-  getTodosForBucket(bucketId){
-    //Get tods
-    
+  componentWillReceiveProps(nextProps) {
+    this.getTodosForBucket(nextProps.bucketId)
   }
 
   render() {
     return (
-     <ol>
-       {this.state.todoList.map(({title, desc, bucket}) => {
-        return (
-          <div>
-            <li>
-              {desc}
-            </li>
-          </div>
-        )
-       })}
-     </ol>
+      <div>
+        <ol>
+         {this.state.todoList.map(({title, desc, bucket}) => {
+          return (
+            <div>
+              <li style={{'alignItems': 'center', 'display': 'flex'}}>
+                <div style={{padding:10,
+                  margin:20,
+                  backgroundColor: bucket,
+                  display:"inline-block",
+                  borderRadius: "50%",
+                  width:10,
+                  height:10,}}>
+                </div>
+                <span>{desc}</span>
+              </li>
+            </div>
+          )
+         })}
+        </ol>
+      </div>
     )
   }
 }
