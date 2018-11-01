@@ -12,12 +12,12 @@ export default class TodoList extends Component {
   }
 
   componentDidMount(){
-    console.log('this.props.bucketId', this.props.bucketId)
+    console.log('this.props.bucketId', this.state.bucketId)
     this.getTodosForBucket(0)
   }
 
-  getTodosForBucket(bucketId){
-    //Get tods
+  componentWillReceiveProps(nextProps) {
+    console.log('nextProps.value', nextProps.bucketId)
     this.setState({
       "todoList": [
         {
@@ -36,6 +36,11 @@ export default class TodoList extends Component {
         }
       ]
     })
+  }
+
+  getTodosForBucket(bucketId){
+    //Get tods
+    
   }
 
   render() {

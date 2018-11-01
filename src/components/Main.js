@@ -17,26 +17,6 @@ export default class Main extends Component {
   handleSelect(bucketId){
     console.log('bucketId', bucketId)
     //Get contents from bucketId
-
-    // this.setState({
-    //   "todoList": [
-    //     {
-    //       "_id": "5bd9887fde4f882c275a7795",
-    //       "uid": 1,
-    //       "desc": "first todo desc",
-    //       "title": "first",
-    //       "bucket": "Red"
-    //     },
-    //     {
-    //       "_id": "5bd988a5de4f882c275a7796",
-    //       "uid": 1,
-    //       "desc": "second todo desc",
-    //       "title": "Second",
-    //       "bucket": "Green"
-    //     }
-    //   ]
-    // })
-
     this.setState({bucketId: bucketId})
   }
 
@@ -70,9 +50,9 @@ export default class Main extends Component {
             return <Tab key={idx} onClick={() => {this.handleSelect(idx)}}>{nm}</Tab>
           })}
         </TabList>
-        <TabPanel>
+        <div>
           <TodoList bucketId={this.state.bucketId} />
-        </TabPanel>
+        </div>
       </Tabs>
       </div>
     )
