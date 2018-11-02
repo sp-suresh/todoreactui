@@ -44,18 +44,15 @@ export default class AddTodo extends Component {
     })
 
   }
-  // componentWillReceiveProps(buckets) {
-  // }
 
   render() {
     return (
       <div>
-        <label style={{margin: '5px', 'color': 'green'}}>{this.state.msg}</label>
         <div style={{margin: '5px'}}>
           <h3>Title: </h3><input ref="txtTitle" maxLength="25" type="text" autofocus="true"/>
           <h3>Description: </h3><textarea maxLength="50" ref="txtDesc" type="text"/>
         </div>
-        <div style={{margin: '5px'}}>
+        <div style={{margin: '5px', 'overflow': 'auto'}}>
           <select ref="drpBucket">
             {this.state.buckets.map(({idx, nm}) => {  
               return (
@@ -65,6 +62,7 @@ export default class AddTodo extends Component {
          </select>
          <button style={{margin: '5px'}} onClick={this.submliTodo}>Submit</button>
         </div>
+        <label style={{margin: '5px', 'color': 'green'}}>{this.state.msg}</label>
       </div>
     )
   }

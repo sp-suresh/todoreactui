@@ -25,11 +25,11 @@ export default class TodoList extends Component {
   render() {
     return (
       <div>
-        <ol>
+        <ul>
          {this.state.todoList.map(({title, desc, bucket}) => {
           return (
             <div>
-              <li style={{'alignItems': 'center', 'display': 'flex'}}>
+              <li style={{'alignItems': 'center', 'display': 'flex', 'cursor': 'pointer'}} title={title} >
                 <div style={{padding:10,
                   margin:20,
                   backgroundColor: bucket,
@@ -38,12 +38,12 @@ export default class TodoList extends Component {
                   width:10,
                   height:10,}}>
                 </div>
-                <span>{desc}</span>
+                <p>{desc}</p>
               </li>
             </div>
           )
          })}
-        </ol>
+        </ul>
       </div>
     )
   }

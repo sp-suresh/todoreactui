@@ -43,19 +43,20 @@ export default class Main extends Component {
   render() {
     return (
       <div>
-        <div><AddTodo buckets={this.state.buckets} refreshTodoList={this.refreshTodoList} /></div>
-        <div style={{margin: '20px'}}>
+        <div>
         <Tabs>
           <TabList>
-            <Tab key={0}  onClick={() => {this.handleSelect(0)}}>All</Tab>
+            <Tab style={{'text-align': 'center', 'width': '23%', 'color': 'grey' }} key={0}  onClick={() => {this.handleSelect(0)}}>All</Tab>
             {this.state.buckets.map(({idx, nm}) => {
-              return <Tab key={idx} onClick={() => {this.handleSelect(idx)}}>{nm}</Tab>
+              return <Tab style={{'text-align': 'center', 'width': '23%', 'color': `${nm}`}} key={idx} onClick={() => {this.handleSelect(idx)}}>{nm}</Tab>
             })}
           </TabList>
-          <div>
-            <TodoList bucketId={this.state.currBucket} />
-          </div>
+          
         </Tabs>
+        </div>
+        <div>
+          <div><AddTodo buckets={this.state.buckets} refreshTodoList={this.refreshTodoList} /></div>
+          <TodoList bucketId={this.state.currBucket} />
         </div>
       </div>
     )
