@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import {Tabs, TabList, Tab, TabPanel} from 'react-tabs'
-import '../css/Buckets.css'
 import 'react-tabs/style/react-tabs.css';
 import TodoList from './TodoList'
 import AddTodo from './AddTodo'
