@@ -49,8 +49,8 @@ export default class AddTodo extends Component {
     return (
       <div style={{border:'1px solid black', margin: '5px'}}>
         <div style={{margin: '5px'}}>
-          <h3>Title: </h3><input ref="txtTitle" maxLength="25" type="text" autofocus="true"/>
-          <h3>Description: </h3><textarea maxLength="50" ref="txtDesc" type="text"/>
+          <h3>Title </h3><input ref="txtTitle" maxLength="25" type="text" autofocus="true"/>
+          <h3>Description </h3><textarea maxLength="50" ref="txtDesc" type="text"/>
         </div>
         <div style={{margin: '5px', 'overflow': 'auto'}}>
           <select ref="drpBucket">
