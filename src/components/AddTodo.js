@@ -47,7 +47,7 @@ export default class AddTodo extends Component {
 
   render() {
     return (
-      <div>
+      <div style={{border:'1px solid black', margin: '5px'}}>
         <div style={{margin: '5px'}}>
           <h3>Title: </h3><input ref="txtTitle" maxLength="25" type="text" autofocus="true"/>
           <h3>Description: </h3><textarea maxLength="50" ref="txtDesc" type="text"/>

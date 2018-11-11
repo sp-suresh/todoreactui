@@ -22,9 +22,6 @@ export default class Main extends Component {
   }
 
   refreshTodoList(bucketId){
-    console.log(typeof bucketId)
-    console.log('refreshTodoList', bucketId)
-    console.log('this.state.currBucket', this.state.currBucket)
     if(this.state.currBucket === bucketId){
       this.setState({currBucket: bucketId})
     }
@@ -41,8 +38,8 @@ export default class Main extends Component {
 
   render() {
     return (
-      <div>
-        <div>
+      <div style={{border:'1px solid black', margin: '1px'}}>
+        <div style={{margin: '10px'}}>
         <Tabs>
           <TabList>
             <Tab style={{'text-align': 'center', 'width': '23%', 'color': 'grey' }} key={0}  onClick={() => {this.handleSelect(0)}}>All</Tab>
@@ -50,7 +47,6 @@ export default class Main extends Component {
               return <Tab style={{'text-align': 'center', 'width': '23%', 'color': `${nm}`}} key={idx} onClick={() => {this.handleSelect(idx)}}>{nm}</Tab>
             })}
           </TabList>
-          
         </Tabs>
         </div>
         <div>

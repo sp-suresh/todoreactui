@@ -27,16 +27,16 @@ export default class TodoList extends Component {
       <div>
         <ul>
          {this.state.todoList.map(({title, desc, bucket}) => {
+          console.log('bucket.toLowerCase()', bucket.toLowerCase())
           return (
             <div>
-              <li style={{'alignItems': 'center', 'display': 'flex', 'cursor': 'pointer'}} title={title} >
-                <div style={{padding:10,
-                  margin:20,
-                  backgroundColor: bucket,
-                  display:"inline-block",
-                  borderRadius: "50%",
-                  width:10,
-                  height:10,}}>
+              <li style={{'alignItems': 'center', 'display': 'flex', 'cursor': 'pointer', border: '1px solid black', 'border-radius': '5px', margin: '1px'}} title={title} >
+                <div style={{'padding':10,
+                  'margin':20,
+                  'border': ` 6px solid ${bucket}`,
+                  'border-radius': '50%',
+                  'width': '10px',
+                  'height': '10px'}}>
                 </div>
                 <p>{desc}</p>
               </li>
