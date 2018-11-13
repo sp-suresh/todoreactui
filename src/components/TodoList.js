@@ -25,9 +25,8 @@ export default class TodoList extends Component {
   render() {
     return (
       <div>
-        <ul>
+        <ul style={{'margin-right': '40px', 'listStyleType': 'decimal'}}>
          {this.state.todoList.map(({title, desc, bucket}) => {
-          console.log('bucket.toLowerCase()', bucket.toLowerCase())
           return (
             <div>
               <li style={{'alignItems': 'center', 'display': 'flex', 'cursor': 'pointer', border: '1px solid black', 'border-radius': '5px', margin: '1px'}} title={title} >
