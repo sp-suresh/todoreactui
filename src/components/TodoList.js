@@ -24,16 +24,23 @@ export default class TodoList extends Component {
 
   render() {
     return (
-      <div>
+      <div  class="grid-container" style={{'width': '99%'}}>
         <ul>
          {this.state.todoList.map(({title, desc, bucket}) => {
-          console.log('bucket.toLowerCase()', bucket.toLowerCase())
           return (
-            <div>
-              <li style={{'alignItems': 'center', 'display': 'flex', 'cursor': 'pointer', border: '1px solid black', 'border-radius': '5px', margin: '1px'}} title={title} >
+            <div class="col-4 col-s-4 grid-item">
+              <li style={
+                {'alignItems': 'center', 
+                  'display': 'flex', 
+                  'cursor': 'pointer', 
+                  'border': '1px solid black', 
+                  'border-radius': '5px',
+                  'min-height': '20vh',
+                }
+                } title={title} >
                 <div style={{'padding':10,
                   'margin':20,
-                  'border': ` 6px solid ${bucket}`,
+                  'border': `6px solid ${bucket}`,
                   'border-radius': '50%',
                   'width': '10px',
                   'height': '10px'}}>

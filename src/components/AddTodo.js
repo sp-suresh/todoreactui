@@ -47,12 +47,12 @@ export default class AddTodo extends Component {
 
   render() {
     return (
-      <div style={{border:'1px solid black', margin: '5px'}}>
-        <div style={{margin: '5px'}}>
+      <div style={{border:'1px solid black', 'min-height': '40vh'}}>
+        <div style={{margin: '0px'}}>
           <h3>Title </h3><input ref="txtTitle" maxLength="25" type="text" autofocus="true"/>
           <h3>Description </h3><textarea maxLength="50" ref="txtDesc" type="text"/>
         </div>
-        <div style={{margin: '5px', 'overflow': 'auto'}}>
+        <div style={{'overflow': 'auto'}}>
           <select ref="drpBucket">
             {this.state.buckets.map(({idx, nm}) => {  
               return (
