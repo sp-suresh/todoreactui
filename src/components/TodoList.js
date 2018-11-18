@@ -24,7 +24,7 @@ export default class TodoList extends Component {
 
   render() {
     return (
-      <div  class="grid-container" style={{'width': '99%'}}>
+      <div style={{'width': '99%'}}>
         <ul>
          {this.state.todoList.map(({title, desc, bucket}) => {
           return (
