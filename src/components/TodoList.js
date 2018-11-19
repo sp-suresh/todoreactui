@@ -28,14 +28,14 @@ export default class TodoList extends Component {
         <ul>
          {this.state.todoList.map(({title, desc, bucket}) => {
           return (
-            <div class="col-4 col-s-4">
-              <li class="col-v-44" style={
+            <div class="col-4 col-s-4 col-v-13 col-v-26 col-v-hn">
+              <li class="col-v-li-13 col-v-li-26" style={
                 {'alignItems': 'center', 
-                  'display': 'flex', 
+                  'display': 'flex',
                   'cursor': 'pointer', 
                   'border': '1px solid black', 
                   'border-radius': '5px',
-                  'height': '22vh',
+                  'margin-top': '2px'
                 }
                 } title={title} >
                 <div style={{'padding':10,

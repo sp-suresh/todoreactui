@@ -13,4 +13,11 @@
 
 ## Demo Look
 
-![Screenshot](./Demo_UI.jpeg)
+1. Desktop View
+ (./Desktop.png)
+
+2. Tablet View
+(./Tablet.png)
+
+3. Mobile View
+(./Mobile.png)
