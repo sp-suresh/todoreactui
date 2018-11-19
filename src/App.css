@@ -16,8 +16,8 @@
 [class*="col-"] {
   width: 100%;
   float: left;
-  padding: 5px;
-  border: 0px solid red;
+  padding: 2px;
+  border: 0px solid white;
 }
 
 ul {
