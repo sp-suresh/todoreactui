@@ -14,11 +14,15 @@
 ## Demo Look
 
 1. Desktop View
+
 ![Screenshot](./Desktop.png)
 
 
 2. Tablet View
+
 ![Screenshot](./Tablet.png)
 
+
 3. Mobile View
+
 ![Screenshot](./Mobile.png)
