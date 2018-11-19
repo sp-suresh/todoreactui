@@ -1,5 +1,5 @@
 
-# A Basic Todo React App(beta)
+# A Basic Todo React App
 
 
 ## How to run
