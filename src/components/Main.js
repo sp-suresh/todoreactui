@@ -38,7 +38,7 @@ export default class Main extends Component {
 
   render() {
     return (
-      <div style={{border:'1px solid black', 'border-radius': '5px'}}>
+      <div class="row" style={{border:'1px solid black', 'border-radius': '5px'}}>
         <div>
         <Tabs>
           <TabList>
